@@ -16,20 +16,20 @@ at the root should be sufficient for most projects. Scattering build
 instructions across multiple subdirectories adds friction without adding
 clarity.
 
-## note on boost
+## Note on Boost
 
-Boost filesystem/system is used as an optional example of an external
+Boost Filesystem/System are used as an optional example of an external
 dependency. If CMake cannot find Boost on your system, the project falls
 back to `std::filesystem` automatically. The build will succeed either way.
 You can also point CMake to a custom Boost installation using `ccmake` or
 `cmake-gui`.
 
-## requirements
+## Requirements
 
 - CMake (3.16 or newer)
 - A C++ compiler with C++17 support (AppleClang, Clang, GCC, or MSVC)
 
-### optional dependencies
+### Optional Dependencies
 
 - Boost filesystem/system (optional)
 	- If not found, this project falls back to `std::filesystem`.
@@ -55,7 +55,7 @@ You can also point CMake to a custom Boost installation using `ccmake` or
   vcpkg integrate install
   ```
 
-## build
+## Build
 
 Configure and build from the repository root:
 
@@ -64,7 +64,7 @@ cmake -S . -B build
 cmake --build build -j
 ```
 
-## run
+## Run
 
 Run the sample executable:
 
@@ -72,7 +72,7 @@ Run the sample executable:
 ./build/example
 ```
 
-## test
+## Test
 
 If GoogleTest is installed and found by CMake, the `unit_tests` target
 is built and tests are registered with CTest.
@@ -86,7 +86,7 @@ ctest --test-dir build --output-on-failure
 If GoogleTest is not installed, the project still configures and builds,
 but no tests are discovered.
 
-## package
+## Package
 
 Create distributable packages with CPack:
 
